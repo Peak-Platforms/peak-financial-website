@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peak Financial Group LLC | Responsible Stewardship for Mission-Driven Acquisitions</title>
+  <meta name="description" content="Peak Financial Group LLC partners with community and faith-based initiatives to responsibly acquire and steward properties that make a lasting impact—beginning with the Freedom Ranch Project in Montezuma, NM.">
+  <meta property="og:title" content="Peak Financial Group LLC — Responsible Stewardship">
+  <meta property="og:description" content="Responsible stewardship for mission-driven acquisitions. Partnering with the Freedom Ranch Project in New Mexico.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thepeakfinancialgroup.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0c1119;
+      --bg2: #0f1822;
+      --card: #111b2a;
+      --card2: #162035;
+      --border: rgba(148,163,184,.13);
+      --border2: rgba(148,163,184,.22);
+      --muted: #7a8fa8;
+      --text: #dde6f0;
+      --text-soft: #b0c2d4;
+      --gold: #c8a96e;
+      --gold-light: #dfc08a;
+      --gold-glow: rgba(200,169,110,.18);
+      --gold-pale: rgba(200,169,110,.08);
+      --sky: #38bdf8;
+      --sky-pale: rgba(56,189,248,.1);
+      --green: #4ade80;
+      --shadow: 0 12px 40px rgba(0,0,0,.4);
+      --radius: 14px;
+      --maxw: 1100px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    a { color: var(--gold); text-decoration: none; transition: opacity .2s; }
+    a:hover { opacity: .8; text-decoration: underline; }
+
+    .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 28px; }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky; top: 0; z-index: 100;
+      backdrop-filter: saturate(140%) blur(12px);
+      background: rgba(12,17,25,.88);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .brand { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+    .brand-mark {
+      width: 36px; height: 36px;
+      background: var(--gold); clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+      flex-shrink: 0;
+    }
+    .brand-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 600; color: var(--text);
+      letter-spacing: 2px; text-transform: uppercase;
+    }
+    .brand-text span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 28px; }
+    .nav-links a {
+      font-size: 0.8rem; font-weight: 500; color: var(--muted);
+      text-decoration: none; letter-spacing: .8px; transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--gold); text-decoration: none; }
+    .nav-cta a {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: .8px;
+      color: var(--gold); text-decoration: none;
+      border: 1px solid var(--gold); border-radius: 6px;
+      padding: 8px 20px; transition: all .2s;
+    }
+    .nav-cta a:hover { background: var(--gold); color: var(--bg); text-decoration: none; }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 88px 0 60px; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; top: -100px; left: 50%; transform: translateX(-50%);
+      width: 700px; height: 500px;
+      background: radial-gradient(ellipse, rgba(200,169,110,.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner { position: relative; z-index: 1; }
+    .eyebrow {
+      display: inline-block; padding: 6px 16px; border-radius: 999px;
+      background: var(--gold-pale); border: 1px solid rgba(200,169,110,.3);
+      color: var(--gold); font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 28px;
+    }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.8rem);
+      font-weight: 300; line-height: 1.15; color: var(--text);
+      margin-bottom: 24px; letter-spacing: -.5px;
+    }
+    .hero h1 em { font-style: italic; color: var(--gold); }
+    .lead {
+      margin: 0 auto 36px; max-width: 720px;
+      color: var(--text-soft); font-size: 1rem; line-height: 1.85;
+      font-weight: 300;
+    }
+    .lead strong { color: var(--text); font-weight: 600; }
+    .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      padding: 12px 28px; border-radius: 8px;
+      border: 1px solid var(--border2); color: var(--text-soft);
+      text-decoration: none; font-size: 0.88rem; font-weight: 500;
+      background: var(--card); transition: all .2s; letter-spacing: .3px;
+    }
+    .btn:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; }
+    .btn.primary {
+      background: var(--gold); color: var(--bg);
+      border-color: var(--gold); font-weight: 700;
+    }
+    .btn.primary:hover { background: var(--gold-light); opacity: 1; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 100%; height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border2), transparent);
+      margin: 0;
+    }
+
+    /* ── SECTION LABELS ── */
+    .section-label {
+      font-size: 0.7rem; font-weight: 600; letter-spacing: 3px;
+      color: var(--gold); text-transform: uppercase;
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px;
+    }
+    .section-label::after { content: ''; flex: 1; max-width: 48px; height: 1px; background: var(--gold); opacity: .4; }
+
+    /* ── CARDS GRID ── */
+    .grid {
+      display: flex; flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      padding: 56px 0;
+    }
+    .card {
+      background: linear-gradient(160deg, var(--card) 0%, var(--card2) 100%);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      box-shadow: var(--shadow);
+      width: 100%; max-width: 780px;
+      transition: border-color .3s;
+    }
+    .card:hover { border-color: var(--border2); }
+    .card.featured {
+      border-color: rgba(200,169,110,.25);
+      background: linear-gradient(160deg, rgba(21,30,46,.95) 0%, rgba(14,22,38,.95) 100%);
+    }
+    .card.featured:hover { border-color: rgba(200,169,110,.45); }
+
+    .card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem; font-weight: 600; color: var(--text);
+      margin-bottom: 16px; line-height: 1.2;
+    }
+    .card h3 em { font-style: italic; color: var(--gold); }
+    .card p {
+      color: var(--text-soft); line-height: 1.85;
+      font-size: 0.95rem; font-weight: 300;
+      margin-bottom: 14px;
+    }
+    .card p:last-child { margin-bottom: 0; }
+    .card p strong { color: var(--text); font-weight: 600; }
+    .card .founder-sig {
+      text-align: right; margin-top: 20px;
+      padding-top: 16px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.88rem; font-style: italic;
+    }
+
+    .card img {
+      width: 100%; border-radius: 10px;
+      margin: 0 auto 24px auto; display: block;
+      border: 1px solid var(--border);
+    }
+    .img-link {
+      display: block; text-align: center;
+      font-weight: 600; color: var(--text);
+      margin-bottom: 16px; font-size: 0.95rem;
+    }
+    .img-link:hover { color: var(--gold); }
+
+    .list {
+      margin: 20px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+    .list li {
+      padding: 10px 0; display: flex; gap: 14px;
+      align-items: flex-start;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-soft); font-size: 0.92rem; font-weight: 300; line-height: 1.7;
+    }
+    .list li:last-child { border-bottom: none; }
+    .dot {
+      width: 7px; height: 7px; border-radius: 999px;
+      background: var(--gold); margin-top: 9px; flex: 0 0 auto;
+    }
+
+    .doc-links { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .doc-link {
+      font-size: 0.8rem; font-weight: 600; letter-spacing: .5px;
+      color: var(--gold); text-decoration: none;
+      border: 1px solid rgba(200,169,110,.3);
+      padding: 8px 16px; border-radius: 6px;
+      transition: all .2s;
+    }
+    .doc-link:hover { background: var(--gold-pale); text-decoration: none; opacity: 1; }
+
+    .disclosure {
+      font-size: 0.8rem; color: var(--muted); margin-top: 16px;
+      font-style: italic; text-align: center;
+    }
+
+    /* ── PLATFORM BRIDGE SECTION ── */
+    .platform-bridge {
+      background: linear-gradient(160deg, rgba(13,20,34,.98) 0%, rgba(10,16,28,.98) 100%);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 0;
+      position: relative; overflow: hidden;
+    }
+    .platform-bridge::before {
+      content: '';
+      position: absolute; top: -150px; right: -100px;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(200,169,110,.04) 0%, transparent 70%);
+    }
+    .bridge-inner {
+      max-width: var(--maxw); margin: 0 auto; padding: 0 28px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+    }
+    .bridge-text {}
+    .bridge-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 300; line-height: 1.2; color: var(--text);
+      margin-bottom: 20px;
+    }
+    .bridge-text h2 em { font-style: italic; color: var(--gold); }
+    .bridge-text p {
+      color: var(--text-soft); font-size: 0.95rem; line-height: 1.85;
+      font-weight: 300; margin-bottom: 16px;
+    }
+    .bridge-text p strong { color: var(--text); font-weight: 600; }
+    .bridge-link {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.82rem; font-weight: 700; letter-spacing: 1.5px;
+      color: var(--gold); text-decoration: none; text-transform: uppercase;
+      margin-top: 8px; transition: gap .2s;
+    }
+    .bridge-link:hover { gap: 14px; text-decoration: none; opacity: 1; }
+
+    .bridge-products { display: flex; flex-direction: column; gap: 12px; }
+    .bridge-product {
+      background: rgba(15,24,40,.8); border: 1px solid var(--border);
+      border-radius: 10px; padding: 18px 22px;
+      display: flex; align-items: center; gap: 16px;
+      transition: border-color .3s;
+    }
+    .bridge-product:hover { border-color: rgba(200,169,110,.35); }
+    .bp-icon { font-size: 1.3rem; flex-shrink: 0; }
+    .bp-name { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .bp-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+    .bp-badge {
+      margin-left: auto; flex-shrink: 0;
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px;
+      color: var(--green); border: 1px solid rgba(74,222,128,.3);
+      border-radius: 999px; padding: 3px 10px; text-transform: uppercase;
+    }
+
+    /* ── PRM SECTION ── */
+    .prm-section {
+      padding: 72px 0;
+      background: var(--bg);
+    }
+    .prm-inner {
+      max-width: var(--maxw); margin: 0 auto; padding: 0 28px;
+    }
+    .prm-card {
+      background: linear-gradient(160deg, var(--card) 0%, var(--card2) 100%);
+      border: 1px solid rgba(200,169,110,.2);
+      border-radius: var(--radius); padding: 48px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+      box-shadow: var(--shadow);
+    }
+    .prm-left h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+      font-weight: 300; line-height: 1.2; color: var(--text);
+      margin-bottom: 16px;
+    }
+    .prm-left h2 em { font-style: italic; color: var(--gold); }
+    .prm-left p {
+      color: var(--text-soft); font-size: 0.95rem; line-height: 1.85;
+      font-weight: 300; margin-bottom: 14px;
+    }
+    .prm-left p strong { color: var(--text); font-weight: 600; }
+    .prm-pillars { display: flex; flex-direction: column; gap: 12px; }
+    .prm-pillar {
+      background: rgba(12,17,25,.7); border: 1px solid var(--border);
+      border-radius: 10px; padding: 18px 20px;
+      display: flex; gap: 14px; align-items: flex-start;
+      transition: border-color .3s;
+    }
+    .prm-pillar:hover { border-color: rgba(200,169,110,.3); }
+    .prm-icon { font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .prm-name { font-size: 0.88rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .prm-desc { font-size: 0.8rem; color: var(--muted); line-height: 1.6; }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      padding: 72px 0;
+      text-align: center;
+    }
+    .contact-box {
+      margin: 0 auto;
+      padding: 44px 48px;
+      background: linear-gradient(160deg, rgba(200,169,110,.06) 0%, rgba(200,169,110,.02) 100%);
+      border: 1px solid rgba(200,169,110,.25);
+      border-radius: var(--radius);
+      max-width: 700px;
+      box-shadow: 0 0 60px rgba(200,169,110,.04);
+    }
+    .contact-box h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem; font-weight: 400; color: var(--text);
+      margin-bottom: 12px;
+    }
+    .contact-box p { color: var(--muted); font-size: 0.92rem; margin-bottom: 24px; font-weight: 300; }
+    .contact-pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+    .pill {
+      padding: 10px 20px; border-radius: 999px;
+      border: 1px solid rgba(200,169,110,.3);
+      background: rgba(12,17,25,.8);
+      color: var(--text-soft); text-decoration: none;
+      font-size: 0.85rem; font-weight: 500;
+      transition: all .2s;
+    }
+    .pill:hover { border-color: var(--gold); color: var(--gold); text-decoration: none; opacity: 1; }
+
+    /* ── FOOTER ── */
+    footer {
+      color: var(--muted);
+      padding: 32px 0 48px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.82rem; line-height: 1.8;
+    }
+    footer a { color: var(--gold); }
+    footer small { font-size: 0.75rem; color: #4a5568; display: block; margin-top: 10px; }
+
+    /* ── FADE ANIMATIONS ── */
+    .fade-up { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 800px) {
+      .nav-links { display: none; }
+      .hero { padding: 64px 0 40px; }
+      .bridge-inner { grid-template-columns: 1fr; gap: 36px; }
+      .prm-card { grid-template-columns: 1fr; gap: 32px; padding: 28px; }
+      .card { padding: 28px 24px; }
+      .contact-box { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+    <a class="brand" href="#">
+      <div class="brand-mark"></div>
+      <div class="brand-text">Peak <span>Financial Group</span></div>
+    </a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#platform">Tech Arm</a>
+      <a href="#ministry">PRM</a>
+      <a href="#properties">Properties</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#contact">Get in Touch</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero container">
+    <div class="hero-inner fade-up">
+      <div class="eyebrow">Stewardship · Property · Purpose</div>
+      <h1>Responsible Stewardship for<br/><em>Mission-Driven Acquisitions</em></h1>
+      <p class="lead">
+        Peak Financial Group LLC partners with community and faith-based initiatives to responsibly acquire and steward properties that make a lasting impact — beginning with the <strong>Freedom Ranch Project</strong> in Montezuma, New Mexico.
+      </p>
+      <div class="hero-cta">
+        <a class="btn primary" href="mailto:kevin@thepeakfinancialgroup.com">Email Us</a>
+        <a class="btn" href="tel:+19405947762">Call 940-594-7762</a>
+        <a class="btn" href="#properties">View Properties</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT + FOUNDER CARDS -->
+  <section class="container grid" id="about">
+
+    <article class="card fade-up">
+      <div class="section-label">The Company</div>
+      <h3>About Peak Financial Group</h3>
+      <p>Peak Financial Group LLC is a Texas-registered company focused on acquiring and managing properties in partnership with mission-driven organizations. We balance prudent business management with lasting community impact — operating at the intersection of responsible stewardship and genuine purpose.</p>
+      <p>Peak Financial Group operates two distinct arms: <strong>Peak Platforms</strong>, a real-time broadcast technology company that generates operating revenue, and a <strong>Mission-Driven Acquisitions</strong> division that directs a portion of those profits toward property stewardship and ministry outreach — beginning with Freedom Ranch.</p>
+    </article>
+
+    <article class="card fade-up">
+      <div class="section-label">The Founder</div>
+      <h3>About Kevin Whitaker</h3>
+      <p><strong>Kevin Whitaker</strong> is the founder of Peak Financial Group LLC and the visionary behind the Freedom Ranch initiative. With a professional background in financial services, Kevin has passed the <strong>Series 6, 63, and 65</strong> securities exams and holds <strong>life and health insurance licenses in Texas, Oklahoma, and New Mexico</strong>, which broadens his perspective on financial and personal stewardship.</p>
+      <p>He divides his time between Texas, Oklahoma, and New Mexico — where he owns a cabin property just a few hundred yards from the planned Freedom Ranch site in Montezuma. His personal investment in the area reflects a hands-on commitment to establishing the first Freedom Ranch model locally before expanding nationwide.</p>
+    </article>
+
+    <article class="card featured fade-up">
+      <div class="section-label">A Message from the Founder</div>
+      <h3>Why <em>Freedom Ranch</em></h3>
+      <p>Freedom Ranch began as more than a project — it's a calling. Over the years, I've seen the toll that stress and sacrifice take on first responders and their families. My goal is simple: to build a <strong>premier sanctuary</strong> where they can rest, renew, and rediscover purpose.</p>
+      <p>Freedom Ranch will be the <strong>premier facilities of their kind in the world</strong> — a place where excellence, faith, and compassion come together to restore those who serve. Every site will reflect that commitment, offering world-class quality and genuine care for those who give their best every day.</p>
+      <div class="founder-sig">— Kevin Whitaker, Founder</div>
+    </article>
+
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PLATFORM BRIDGE SECTION -->
+  <section class="platform-bridge" id="platform">
+    <div class="bridge-inner">
+      <div class="bridge-text fade-up">
+        <div class="section-label">How We Fund the Mission</div>
+        <h2>Commerce that<br/><em>serves a purpose.</em></h2>
+        <p>Peak Financial Group's technology division — <strong>Peak Platforms</strong> — operates a portfolio of real-time broadcast infrastructure products serving sports networks, cheer and gymnastics gyms, casino floors, and ministry organizations nationwide.</p>
+        <p>A portion of all Peak Platforms revenue is formally directed to <strong>Patriot Rider Ministries</strong> and the <strong>Freedom Ranch Project</strong>. When operators license Peak infrastructure, they're part of something larger than a software subscription.</p>
+        <a class="bridge-link" href="https://peak-platforms.com" target="_blank">
+          Explore Peak Platforms <span>→</span>
+        </a>
+      </div>
+      <div class="bridge-products fade-up">
+        <div class="bridge-product">
+          <div class="bp-icon">🏈</div>
+          <div>
+            <div class="bp-name">XSEN</div>
+            <div class="bp-desc">AI-powered sports fan engagement & broadcast network</div>
+          </div>
+          <div class="bp-badge">Live</div>
+        </div>
+        <div class="bridge-product">
+          <div class="bp-icon">📣</div>
+          <div>
+            <div class="bp-name">CheerPal</div>
+            <div class="bp-desc">Real-time broadcast for cheer & gymnastics competitions</div>
+          </div>
+          <div class="bp-badge">Live</div>
+        </div>
+        <div class="bridge-product">
+          <div class="bp-icon">🔥</div>
+          <div>
+            <div class="bp-name">HotSeat</div>
+            <div class="bp-desc">Casino floor broadcast system for gaming properties</div>
+          </div>
+          <div class="bp-badge">Live</div>
+        </div>
+        <div class="bridge-product">
+          <div class="bp-icon">🕊️</div>
+          <div>
+            <div class="bp-name">HopePal & WordPal</div>
+            <div class="bp-desc">Encrypted communication for ministry & outreach organizations</div>
+          </div>
+          <div class="bp-badge">Live</div>
+        </div>
+        <div class="bridge-product" style="border-color: rgba(200,169,110,.25); background: rgba(200,169,110,.04);">
+          <div class="bp-icon">🏛️</div>
+          <div>
+            <div class="bp-name">Peak Platforms → PRM → Freedom Ranch</div>
+            <div class="bp-desc">A portion of all revenue supports Patriot Rider Ministries and Freedom Ranch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PATRIOT RIDER MINISTRIES SECTION -->
+  <section class="prm-section" id="ministry">
+    <div class="prm-inner">
+      <div class="prm-card fade-up">
+        <div class="prm-left">
+          <div class="section-label">The Ministry</div>
+          <h2>Patriot Rider<br/><em>Ministries</em></h2>
+          <p>Freedom Ranch operates as an outreach of <strong>Patriot Rider Ministries (PRM)</strong> — a nonprofit ministry dedicated to serving motorcyclists and first responders through community, faith, and outreach.</p>
+          <p>PRM is the ministry arm that gives Freedom Ranch its mission and its heart. While Peak Financial Group stewards the properties and Peak Platforms funds the operation, Patriot Rider Ministries provides the purpose that binds it all together.</p>
+        </div>
+        <div class="prm-pillars">
+          <div class="prm-pillar">
+            <div class="prm-icon">🏍️</div>
+            <div>
+              <div class="prm-name">Serving Motorcyclists</div>
+              <div class="prm-desc">Community, fellowship, and faith outreach for motorcycle ministry chapters across the region.</div>
+            </div>
+          </div>
+          <div class="prm-pillar">
+            <div class="prm-icon">🚒</div>
+            <div>
+              <div class="prm-name">First Responder Outreach</div>
+              <div class="prm-desc">Rest, renewal, and support programs for those who serve — the core mission behind Freedom Ranch.</div>
+            </div>
+          </div>
+          <div class="prm-pillar">
+            <div class="prm-icon">🌄</div>
+            <div>
+              <div class="prm-name">Freedom Ranch Retreats</div>
+              <div class="prm-desc">Peaceful, world-class retreat facilities operated as an outreach of PRM — beginning in Montezuma, NM.</div>
+            </div>
+          </div>
+          <div class="prm-pillar">
+            <div class="prm-icon">🔗</div>
+            <div>
+              <div class="prm-name">Funded by Peak Platforms</div>
+              <div class="prm-desc">A portion of Peak Platforms revenue is formally directed to PRM — connecting commerce to calling.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- PROPERTIES -->
+  <section class="container grid" id="properties">
+
+    <article class="card fade-up">
+      <div class="section-label">First Retreat Site</div>
+      <h3>Freedom Ranch — <em>Montezuma, New Mexico</em></h3>
+      <img src="https://raw.githubusercontent.com/myvfc/botosphere-images/main/montezuma%20house.png"
+           alt="26 Camino Verde, Montezuma, NM">
+      <a class="img-link" href="https://www.realtor.com/realestateandhomes-detail/26-Camino-Verde_Montezuma_NM_87731_M16379-47022" target="_blank">
+        26 Camino Verde, Montezuma, New Mexico 87731 →
+      </a>
+      <p>The Montezuma property has been identified as the first Freedom Ranch retreat site. Located in the mountains near Las Vegas, New Mexico, it will serve as the pilot model for future Freedom Ranch facilities nationwide — offering a peaceful environment for restoration, family connection, and outdoor activities.</p>
+      <p>The surrounding area was deeply affected by the Hermits Peak and Calf Canyon wildfires in April 2022 — the largest in New Mexico's history. The Freedom Ranch vision here also reflects a commitment to long-term community renewal and healing after that devastation.</p>
+      <ul class="list">
+        <li><span class="dot"></span><span>Main residence suitable for a central lodge and group gathering space.</span></li>
+        <li><span class="dot"></span><span>Expansive acreage for future guest cabins, trails, and activity areas.</span></li>
+        <li><span class="dot"></span><span>Privacy and natural beauty with convenient community access.</span></li>
+      </ul>
+      <div class="doc-links">
+        <a class="doc-link" href="https://drive.google.com/file/d/1QS7ls_KLTuEzLADrWgzJgsyJGp_fP-uG/view?usp=sharing" target="_blank">📄 Property Disclosure</a>
+        <a class="doc-link" href="https://raw.githubusercontent.com/myvfc/botosphere-images/main/26%20camino%20verde%20google%20earth.png" target="_blank">🛰️ Google Earth View</a>
+      </div>
+    </article>
+
+    <article class="card fade-up">
+      <div class="section-label">National Headquarters</div>
+      <h3>Freedom Ranch HQ — <em>Dallas–Fort Worth, Texas</em></h3>
+      <img src="https://raw.githubusercontent.com/myvfc/botosphere-images/main/FR HQ.jpg"
+           alt="Freedom Ranch Headquarters Property, Roanoke TX">
+      <a class="img-link" href="https://www.realtor.com/realestateandhomes-detail/14250-Chaparral-Ln_Roanoke_TX_76262_M86155-66993" target="_blank">
+        14250 Chaparral Lane, Roanoke, Texas 76262 →
+      </a>
+      <p>The Dallas–Fort Worth area has been selected as the headquarters for Freedom Ranch. Its central location, premier infrastructure, and proximity to DFW International Airport make it the ideal hub for national coordination, leadership training, and expansion to future retreat sites.</p>
+      <p>Peak Financial Group is currently evaluating a premier 5-acre estate on Chaparral Lane in Roanoke — originally developed as a luxury residence and corporate retreat — as the potential home of Freedom Ranch Headquarters. The property features meeting and event areas, entertainment spaces, a pool, and landscaped grounds less than 30 minutes from DFW Airport. <strong>An adjacent 5-acre tract may also be available, offering future expansion potential.</strong></p>
+      <p class="disclosure">Property shown is under evaluation by Peak Financial Group LLC for use as Freedom Ranch Headquarters.</p>
+    </article>
+
+    <article class="card fade-up">
+      <div class="section-label">Program Goals</div>
+      <h3>What Freedom Ranch <em>Provides</em></h3>
+      <ul class="list">
+        <li><span class="dot"></span><span>Short-term stays and family retreats for first responders and veterans.</span></li>
+        <li><span class="dot"></span><span>Counseling, chaplaincy, and stress-management programs.</span></li>
+        <li><span class="dot"></span><span>Outdoor therapy, equine activities, and community outreach.</span></li>
+        <li><span class="dot"></span><span>A sustainable model that can be replicated in other regions nationwide.</span></li>
+      </ul>
+    </article>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-box fade-up">
+        <h3>Get in Touch</h3>
+        <p>We welcome professional conversations with sellers, agents, lenders, ministry partners, and community organizations.</p>
+        <div class="contact-pills">
+          <a class="pill" href="mailto:kevin@thepeakfinancialgroup.com">kevin@thepeakfinancialgroup.com</a>
+          <a class="pill" href="tel:+19405947762">940-594-7762</a>
+          <a class="pill" href="https://peak-platforms.com" target="_blank">Peak Platforms →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    © <span id="year"></span> Peak Financial Group LLC · thepeakfinancialgroup.com<br>
+    A portion of <a href="https://peak-platforms.com" target="_blank">Peak Platforms</a> revenue supports <a href="#ministry">Patriot Rider Ministries</a> and the Freedom Ranch Project.<br>
+    <small>Property acquisitions and management activities are conducted by Peak Financial Group LLC. Freedom Ranch retreat programs operate as an outreach of Patriot Rider Ministries, a nonprofit ministry organization.</small>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Fade-up scroll animations
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+  // Trigger hero immediately
+  document.querySelector('.hero .fade-up')?.classList.add('visible');
+</script>
+
+</body>
+</html>
